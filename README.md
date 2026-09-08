@@ -4,7 +4,7 @@
 
 ## Installation
 
-Install the package from the project directory using pip:
+Install the package using pip:
 
 ```bash
 python -m pip install .
@@ -12,47 +12,47 @@ python -m pip install .
 
 ## Usage
 
-Import the shortest path module with:
+Import the package with:
 
 ```python
 from graphs_llennon import sp
 ```
 
-Example:
-
-```python
-graph = {
-    0: {1: 4, 2: 1},
-    1: {3: 1},
-    2: {1: 2, 3: 5},
-    3: {3: 0}
-}
-
-dist, path = sp.dijkstra(graph, 0)
-
-print(dist)
-print(path)
-```
-
 ## Testing
 
-The included `test.py` reads a weighted graph from a text file.
+Before running `test.py`, create a file named `graphs.txt` in the project folder.
 
-Run it with:
+The file should contain the source vertex, destination vertex, and weight for each edge:
+
+```text
+0 1 4
+0 2 1
+1 3 1
+2 1 2
+2 3 5
+3 4 3
+4 4 0
+```
+
+Then run:
 
 ```bash
-python test.py graph.txt
+python test.py graphs.txt
 ```
+
+The program will use Dijkstra's algorithm to display the shortest distances and paths from vertex `0`.
 
 ## Project Structure
 
 ```text
-src/
-└── graphs_llennon/
-    ├── __init__.py
-    ├── heapq.py
-    └── sp.py
-test.py
-README.md
-pyproject.toml
+hwk4/
+├── src/
+│   └── graphs_llennon/
+│       ├── __init__.py
+│       ├── heapq.py
+│       └── sp.py
+├── graphs.txt
+├── test.py
+├── README.md
+└── pyproject.toml
 ```
