@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphs_llennon"
+version = "1.0.0"
+description = "A Python library containing graph algorithms including Dijkstra's shortest path algorithm."
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.setuptools.packages.find]
+where = ["src"]
