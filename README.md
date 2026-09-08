@@ -1,6 +1,6 @@
 # graphs_llennon
 
-`graphs_llennon` is a Python library that implements Dijkstra's shortest path algorithm for weighted graphs.
+`graphs_llennon` is a Python library that implements Dijkstra's shortest path algorithm. The algorithm uses a min-heap to find the lowest-cost paths from a source vertex to other vertices in a weighted graph.
 
 ## Installation
 
